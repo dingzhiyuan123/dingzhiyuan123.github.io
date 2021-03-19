@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="React的性能优化问题1.key当我们遍历数组时，React要求我们去给每一个item填写一个唯一的key，当我们给定key值只想到了二分之一，在给定key值时最好不要用index去给定，因为如果,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -60,7 +60,8 @@
 
         </div>
         <div class="content markdown">
-            
+            <h1 id="React的性能优化问题"><a href="#React的性能优化问题" class="headerlink" title="React的性能优化问题"></a>React的性能优化问题</h1><h2 id="1-key"><a href="#1-key" class="headerlink" title="1.key"></a>1.key</h2><p>当我们遍历数组时，React要求我们去给每一个item填写一个唯一的key，当我们给定key值只想到了二分之一，在给定key值时最好不要用index去给定，因为如果当我们的数据不是顺序添加的，而是以其他方式比如：倒叙，随机插入等等，这样会导致每一次我们在添加数据时，每一个item的索引号都会发生改变，而当Key变化时，React就会认为这与之前的数据值不相同，会多次执行渲染，会造成大量的性能浪费。所以只在万不得已时，才将数据的Key设为索引号。</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
